@@ -3,13 +3,23 @@ package com.orangehrm.basetest;
 import java.time.Duration;
 
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
+import com.orangehrm.factories.BrowserFactory;
+import com.orangehrm.factories.DriverFactory;
+import com.orangehrm.factories.ExtentManager;
 import com.orangehrm.util.ConfigReader;
 
 public class BaseClass {
 
 	BrowserFactory bf = new BrowserFactory();
+	
+	 @BeforeSuite
+	    public void setupSuite() {
+	        ExtentManager.getInstance(); // Initialize Extent Reports
+	    }
 
 	@BeforeMethod
 	public void setUp() {
@@ -28,4 +38,9 @@ public class BaseClass {
 		DriverFactory.closeDriver();
 
 	}
+	
+	 @AfterSuite
+	    public void tearDownSuite() {
+	        ExtentManager.getInstance().flush(); // Ensure final report is saved
+	    }
 }

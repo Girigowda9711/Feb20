@@ -1,4 +1,4 @@
-package com.orangehrm.basetest;
+package com.orangehrm.factories;
 
 import org.openqa.selenium.WebDriver;
 
