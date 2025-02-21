@@ -11,10 +11,7 @@
         <methods>
           <include name="userValidlogin2"/>
           <include name="userValidlogin1"/>
-          <include name="tearDownSuite"/>
-          <include name="setupSuite"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
+          
         </methods>
       </class> <!-- com.orangehrm.testcases.LoginTest -->
     </classes>

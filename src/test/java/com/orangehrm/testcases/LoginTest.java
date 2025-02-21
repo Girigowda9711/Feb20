@@ -31,7 +31,7 @@ public class LoginTest extends BaseClass {
 	@Test
 	public void userValidlogin1() throws InterruptedException {
 		loginpage = new LoginPage();
-		String username = ConfigReader.getProperty("usernamd");
+		String username = ConfigReader.getProperty("username");
 		String password = ConfigReader.getProperty("password");
 
 		loginpage.loginToApplication(username, password);
@@ -41,7 +41,7 @@ public class LoginTest extends BaseClass {
 	@Test
 	public void userValidlogin2() throws InterruptedException {
 		loginpage = new LoginPage();
-		String username = ConfigReader.getProperty("userame");
+		String username = ConfigReader.getProperty("username");
 		String password = ConfigReader.getProperty("password");
 
 		loginpage.loginToApplication(username, password);
