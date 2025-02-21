@@ -5,8 +5,10 @@
     <classes>
       <class name="com.orangehrm.testcases.LoginTest">
         <methods>
-          <include name="userValidlogin1"/>
+          <include name="tearDownSuite"/>
+          <include name="setupSuite"/>
           <include name="tearDown"/>
+          <include name="userValidlogin"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.orangehrm.testcases.LoginTest -->
