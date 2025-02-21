@@ -11,11 +11,11 @@ public class ExtentFactory {
 		return extent.get();
 	}
 	
-	public void setExtent(ExtentTest extentTestObject) {
+	public static void setExtent(ExtentTest extentTestObject) {
 		extent.set(extentTestObject);
 	}
 	
-	public void removeExtentObject() {
+	public static void removeExtentObject() {
 		extent.remove();
 	}
 
