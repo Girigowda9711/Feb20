@@ -7,6 +7,7 @@ import com.orangehrm.basetest.BaseClass;
 import com.orangehrm.factories.ExtentManager;
 import com.orangehrm.pages.LoginPage;
 import com.orangehrm.util.ConfigReader;
+import com.orangehrm.util.LogsUtil;
 
 public class LoginTest extends BaseClass {
 	public LoginPage loginpage;
@@ -15,13 +16,15 @@ public class LoginTest extends BaseClass {
 	public void userValidlogin() throws InterruptedException {
 		loginpage = new LoginPage();
 		ExtentManager.getTest().log(Status.INFO, "Starting Login Test");
-
+		LogsUtil.info("enter the username");
 		String username = ConfigReader.getProperty("username");
+		LogsUtil.info("enter the password");
 		String password = ConfigReader.getProperty("password");
 
 		loginpage.loginToApplication(username, password);
-		
-		 ExtentManager.getTest().log(Status.PASS, "Login Test Passed");
+
+		ExtentManager.getTest().log(Status.PASS, "Login Test Passed");
+		LogsUtil.info("user successfully login");
 
 	}
 
